@@ -7,6 +7,7 @@ class CreateFoods < ActiveRecord::Migration[5.2]
 	  t.text :href
       t.string :avatars
       t.integer :foodtype
+      t.integer :price
       t.timestamps
     end
   end

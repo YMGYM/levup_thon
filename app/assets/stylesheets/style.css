@@ -668,6 +668,7 @@ footer {
     height : 400px;
     border : 2px solid var(--clr-orange);
     float : left;
+    text-align: center; 
 }
 
 .detail_layout {

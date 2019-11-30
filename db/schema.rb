@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 2019_11_30_182706) do
     t.text "href"
     t.string "avatars"
     t.integer "foodtype"
+    t.integer "price"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

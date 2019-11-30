@@ -48,10 +48,11 @@ class FoodController < ApplicationController
      
       # type == 0 => dry
       # type == 1 => wet
+      rannum = Random.new
       
       dry_6star.length.times do |t|
           if Food.find_by(title: dry_6star[t][:name]).nil?
-              Food.create(title: dry_6star[t][:name], imgsrc: dry_6star[t][:imgsrc], href: dry_6star[t][:href], foodtype: 0)
+              Food.create(title: dry_6star[t][:name], imgsrc: dry_6star[t][:imgsrc], href: dry_6star[t][:href], foodtype: 0, price: rannum.rand(100000))
 
           else
               puts "Record found"
@@ -60,7 +61,7 @@ class FoodController < ApplicationController
       
       dry_5star.length.times do |t|
           if Food.find_by(title: dry_5star[t][:name]).nil?
-              Food.create(title: dry_5star[t][:name], imgsrc: dry_5star[t][:imgsrc], href: dry_5star[t][:href], foodtype: 0)
+              Food.create(title: dry_5star[t][:name], imgsrc: dry_5star[t][:imgsrc], href: dry_5star[t][:href], foodtype: 0, price: rannum.rand(100000))
 
           else
               puts "Record found"
@@ -69,7 +70,7 @@ class FoodController < ApplicationController
       
       dry_4star.length.times do |t|
           if Food.find_by(title: dry_4star[t][:name]).nil?
-              Food.create(title: dry_4star[t][:name], imgsrc: dry_4star[t][:imgsrc], href: dry_4star[t][:href], foodtype: 0)
+              Food.create(title: dry_4star[t][:name], imgsrc: dry_4star[t][:imgsrc], href: dry_4star[t][:href], foodtype: 0, price: rannum.rand(100000))
 
           else
               puts "Record found"
