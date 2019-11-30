@@ -1,7 +1,4 @@
 module Crawler
-    require 'open-uri'
-    require 'nokogiri'
-
     def Crawler.crawl(url)
         # 수정 원본 도큐먼트 파일입니다.
         doc = Nokogiri::HTML(open(url))
@@ -16,8 +13,7 @@ module Crawler
             namedata.push(t.inner_text)
 
         end
-
-
+        
 
         imgdata = []
 

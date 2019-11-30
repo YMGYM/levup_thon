@@ -10,14 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_30_130605) do
+ActiveRecord::Schema.define(version: 2019_11_30_182706) do
 
   create_table "foods", force: :cascade do |t|
     t.string "title"
     t.text "caption"
     t.text "imgsrc"
     t.text "href"
-    t.integer "type"
+    t.string "avatars"
+    t.integer "foodtype"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -34,6 +35,22 @@ ActiveRecord::Schema.define(version: 2019_11_30_130605) do
     t.datetime "updated_at", null: false
     t.index ["food_id"], name: "index_reviews_on_food_id"
     t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "surveys", force: :cascade do |t|
+    t.integer "user_id"
+    t.string "pet_name"
+    t.string "pet_size"
+    t.string "feed_budget"
+    t.boolean "canned_feed"
+    t.boolean "dry_feed"
+    t.boolean "chewing_gum"
+    t.boolean "freeze_dried_feed"
+    t.boolean "freeze_dried_snacks"
+    t.boolean "tartar_removal_snack"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_surveys_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

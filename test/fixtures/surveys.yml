@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  pet_name: MyString
+  pet_size: MyString
+  feed_budget: MyString
+  canned_feed: false
+  dry_feed: false
+  chewing_gum: false
+  freeze_dried_feed: false
+  freeze_dried_snacks: false
+  tartar_removal_snack: false
+
+two:
+  user: two
+  pet_name: MyString
+  pet_size: MyString
+  feed_budget: MyString
+  canned_feed: false
+  dry_feed: false
+  chewing_gum: false
+  freeze_dried_feed: false
+  freeze_dried_snacks: false
+  tartar_removal_snack: false

@@ -64,3 +64,5 @@ gem 'rails_db'
 gem 'devise'
 gem 'devise-i18n'
 gem 'nokogiri'
+
+gem 'carrierwave', '~> 2.0'

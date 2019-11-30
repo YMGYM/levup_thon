@@ -1,2 +1,201 @@
-<h1>Food#list</h1>
-<p>Find me in app/views/food/list.html.erb</p>
+
+
+<body>
+<%=javascript_include_tag 'application',media: 'all'  %>
+    
+    <header>
+        <div class="burger">
+            <span>MENU</span>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav>
+            
+            <ul class="nav-links">
+                <div class="eyes">
+                    <div class="eye eye-left">
+                        <div class="ball"></div>
+                    </div>           
+                    <div class="eye eye-right">
+                        <div class="ball"></div>
+                    </div>
+                </div>
+
+                <li><a href="list.html">전체보기</a></li>                        
+                <li><a href="mypage.html">나의 페이지</a></li>                        
+                <li><a href="rank.html">Dang's award</a></li>                        
+                <li><a href="apply.html">설문조사</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="all-sections hideForNav">
+        
+        <section class="home-intro">
+            <div class="home-text">
+                <h1>전체 상품 보기</h1>
+                <p>전체상품을 댕댕이의 선호도에 따라 필터링 해 볼 수 있습니다!</p>
+            </div>
+        </section>
+
+        
+
+        <form action="#" autocomplete="off">
+
+            <h4>카테고리</h4>
+            <div class="grid-check">
+                <label class="checkbox-label">
+                    <input name="dryfood" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">건식 사료</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="cannedfood" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">습식 사료</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="freeze" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">동결건조 사료</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="dentalgum" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">치석제거 간식</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="gum" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">껌</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="freezetreats" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">동결건조 간식</span>
+                </label>
+            </div>
+
+
+            <h4>체급</h4>
+            <div class="grid-check">
+                
+                <label class="checkbox-label">
+                    <input name="small" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">소형견</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="medium" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">중형견</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="large"class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">대형견</span>
+                </label>
+            </div>
+
+            <h4>영양등급</h4>
+            <div class="grid-check">
+                <label class="checkbox-label">
+                    <input name="a" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">A</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="b" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">B</span>
+                </label>
+                <label class="checkbox-label">
+                    <input name="c" class="checkbox-input" type="checkbox" />
+                    <i class="custom-checkbox2"></i>
+                    <span class="small-size">C</span>
+                </label>
+            </div>
+
+            <h4>가격대</h4>
+
+            <div class="grid-check">
+            <select class="drop" name="price">
+                <option value="12">~ 2만원</option>
+                <option value="25">2만원 ~ 5만원</option>
+                <option value="510">5만원 ~ 10만원</option>
+                <option value="10">10만원이상</option>
+            </select>
+            
+            </div>
+
+        </div>
+            
+            <div class="onlypadding"><button class="filter-apply">적용하기</button></div>
+            
+        </form>
+    </div>  
+        
+    <div class="all_product">
+     <% @all_food.each do |f| %>
+        <div class="grid">
+            <a href="<%= f.href %>"><img src="https://shopping-phinf.pstatic.net/main_5677880/5677880717.20191113154146.jpg?type=f300" width="250px" hegiht="250px" alt="이미지설명"></a>
+            <div class="info">
+                <h5> <%= f.title %></h5>
+                <p> 가격 : 50000 원</p>
+                <p> 제품 설명 : <%= f.caption %></p>
+                <a href = "https://search.shopping.naver.com/search/all.nhn?query=%EA%B0%95%EC%95%84%EC%A7%80+%EC%82%AC%EB%A3%8C&cat_id=&frm=NVSHATC"> <p>판매처</p> </a>
+            </div>
+        </div>
+        <% end %>
+        <div class="grid">
+            <a href="이미지링크"><img src="https://shopping-phinf.pstatic.net/main_5677880/5677880717.20191113154146.jpg?type=f300" width="250px" hegiht="250px" alt="이미지설명"></a>
+            <div class="info">
+                <h5> 제품 타이틀 </h5>
+                <p> 가격 : 50000 원</p>
+                <a href = "https://search.shopping.naver.com/search/all.nhn?query=%EA%B0%95%EC%95%84%EC%A7%80+%EC%82%AC%EB%A3%8C&cat_id=&frm=NVSHATC"> <p>판매처</p> </a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <a href="이미지링크"><img src="https://shopping-phinf.pstatic.net/main_5677880/5677880717.20191113154146.jpg?type=f300" width="250px" hegiht="250px" alt="이미지설명"></a>
+            <div class="info">
+                <h5> 제품 타이틀 </h5>
+                <p> 가격 : 50000 원</p>
+            
+                <a href = "https://search.shopping.naver.com/search/all.nhn?query=%EA%B0%95%EC%95%84%EC%A7%80+%EC%82%AC%EB%A3%8C&cat_id=&frm=NVSHATC"> <p>판매처</p> </a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <a href="이미지링크"><img src="https://shopping-phinf.pstatic.net/main_5677880/5677880717.20191113154146.jpg?type=f300" width="250px" hegiht="250px" alt="이미지설명"></a>
+            <div class="info">
+                <h5> 제품 타이틀 </h5>
+                <p> 가격 : 50000 원</p>
+                <a href = "https://search.shopping.naver.com/search/all.nhn?query=%EA%B0%95%EC%95%84%EC%A7%80+%EC%82%AC%EB%A3%8C&cat_id=&frm=NVSHATC"> <p>판매처</p> </a>
+            </div>
+        </div>
+
+        <div class="grid">
+            <a href="이미지링크"><img src="https://shopping-phinf.pstatic.net/main_5677880/5677880717.20191113154146.jpg?type=f300" width="250px" hegiht="250px" alt="이미지설명"></a>
+                
+            <div class="info">
+                <h5> 제품 타이틀 </h5>
+                <p> 가격 : 50000 원</p>
+                <a href = "https://search.shopping.naver.com/search/all.nhn?query=%EA%B0%95%EC%95%84%EC%A7%80+%EC%82%AC%EB%A3%8C&cat_id=&frm=NVSHATC"> <p>판매처</p> </a>
+            </div>
+        </div>
+
+    </div>
+
+        
+
+    <footer>
+        
+    </footer>
+    
+    <button class="button-scroll">
+        <img src="arrow1.png">
+    </button>    
+
+</body>

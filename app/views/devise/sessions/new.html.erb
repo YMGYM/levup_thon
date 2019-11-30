@@ -1,147 +1,26 @@
-<h2>Log in</h2>
 
+
+<section class="form">
+<h1 class="apply-title">환상적인 사료 정보를 위해 로그인하세요! </h2>
+<br>
+            
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <div style="margin-top: 30px;">
         <%= content_tag(:div, "이메일", class: "") %>
-        <%= f.email_field :email, id: "form_1", autofocus: true, autocomplete: "email", placeholder: "이메일", class: "" %>
+        <%= f.email_field :email, id: "form_1", autofocus: true, autocomplete: "email", placeholder: "example@localhost.com", class: "" %>
+
     </div>
     <div style="margin-top: 10px;">
-    	<div class="label">암호</div>
-		<%= f.password_field :password, class: "devise_noborder", id: "form_2", autofocus: true, autocomplete: "off", placeholder: " ", value: "" %>
+        <div class="label">비밀번호</div>
+    <%= f.password_field :password, class: "devise_noborder", id: "form_2", autofocus: true, autocomplete: "off", placeholder: "password", value: "" %>
     </div>
   </div>
 
   <div class="form-actions">
-    <%= f.button :submit, "Log in" %>
+    <%= f.button :submit, "Log in", class: 'submit-apply' %>
   </div>
 <% end %>
 
 <%= render "devise/shared/links" %>
-
-
-
-
-
-
-        <header>
-                <div class="burger">
-                    <span>MENU</span>
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
-                </div>
-                <nav>
-                    
-                    <ul class="nav-links">
-                        <div class="eyes">
-                            <div class="eye eye-left">
-                                <div class="ball"></div>
-                            </div>           
-                            <div class="eye eye-right">
-                                <div class="ball"></div>
-                            </div>
-                        </div>
-                        
-                        <li><a href="list.html">전체보기</a></li>
-                        <li><a href="mypage.html">나의 페이지</a></li>
-                        <li><a href="rank.html">Dang's award</a></li>
-                        <li><a href="apply.html">설문조사</a></li>
-                    </ul>
-                    
-                </nav>
-            </header>
-    
-    <div class="all-sections hideForNav">
-        <img class="applyimg" src="images/tiger.jpg" alt="">
-        <section class="form">
-            <h1 class="apply-title">Let us find the perfect treats for your doggo!<br>Fill out the form and find out now.</h2>
-            <form class="apply-form" action="#" autocomplete="off">
-
-                <label for="yourname" class="question">견주님 이름</label>
-                <input class="colorchange" name="yourname" type="text" placeholder="홍길동">          
-                
-                <label for="dogname" class="question">견주님의 강아지 이름</label>
-                <input class="colorchange" type="text" name="dogname" placeholder="두부">
-                
-                <label for="dropdown" class="question">한달에 사료에 얼마나 쓰시나요?</label>
-                <select class="dropdown" name="dropdown">
-                    <option value="hampstead">~1만원</option>
-                    <option value="primrose">1만원~2만원</option>
-                    <option value="finsbury">2만원~5만원</option>
-                    <option value="regent">5~10만원</option>
-                    <option value="victoria">10만원~</option>
-                </select>
-            </label>
-            
-            <div class="question">어떤 종류의 사료/간식을 찾기 원하시나요?</div>
-            <div class="grid-park">
-                <label class="checkbox-label">
-                    <input name=regent class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>건식 사료</span>
-                </label>
-                <label class="checkbox-label">
-                    <input name=hampstead class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>습식 사료</span>
-                </label>
-                <label class="checkbox-label">
-                    <input name=battersea class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>동결건조 사료</span>
-                </label>
-                <label class="checkbox-label">
-                    <input name=hyde class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>동결건조 간식</span>
-                </label>
-                <label class="checkbox-label">
-                    <input name=finsbury class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>껌</span>
-                </label>
-                <label class="checkbox-label">
-                    <input name=victoria class="checkbox-input" type="checkbox" />
-                    <i class="custom-checkbox"></i>
-                    <span>치석제거 간식</span>
-                </label>
-            </div>
-            
-            <div class="question">당신의 강아지는?</div>
-            <label class="radio-label">
-                <input name=sociable class="radio-field" type="radio" value="yes">
-                <i class="radio-button"></i>
-                <span>소형견</span>
-            </label>
-            <label class="radio-label">
-                <input name=sociable class="radio-field" type="radio" value="no">
-                <i class="radio-button"></i>
-                <span>중형견</span>
-            </label>
-            <label class="radio-label">
-                <input name=sociable class="radio-field" type="radio" value="depends">
-                <i class="radio-button"></i>
-                <span>대형견</span>
-            </label>
-            
-            <!-- <label class="question" for="email">이메일 주소</label>
-            <input class="colorchange" name=email type="email" placeholder="hello@woooof.com"> -->
-
-            <label for="message" class="question more">덧붙히실 말씀</label>
-            <textarea name="message" type="textarea" rows="4" cols="50" placeholder="치킨 함량이 높으면 저희 두부가 설사를 합니다.."></textarea>       
-
-            
-            <div class="form-action"><button class="submit-apply">제출하기</button></div>
-            
-        </form>
-    </section>
-</div>    
-
-    <footer>
-    </footer>
-
-    <button class="button-scroll">
-            <img src="arrow.png" alt="">
-        </button>
-<script src="app.js"></script>
+</section>

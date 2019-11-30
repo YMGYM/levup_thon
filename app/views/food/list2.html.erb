@@ -1,0 +1,13 @@
+
+<% @all_food.each do |f| %>
+    이름 : 
+    <%= f.title %> <br />
+    설명(아직없음) : 
+    <%= f.caption %><br />
+    이미지 : 
+    <img src="<%= f.imgsrc %>" /><br />
+    링크(안쓰는 정보)
+    <a href="<%= f.href %>">이동</a><br />
+    
+    <br /><br />
+<% end %>

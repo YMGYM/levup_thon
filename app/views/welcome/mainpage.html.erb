@@ -1,1 +1,163 @@
-주황색 강아지 페이지
+<header>
+        <div class="burger">
+            <span>MENU</span>
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <nav>
+            
+            <ul class="nav-links">
+                <div class="eyes">
+                    <div class="eye eye-left">
+                        <div class="ball"></div>
+                    </div>           
+                    <div class="eye eye-right">
+                        <div class="ball"></div>
+                    </div>
+                </div>   
+                
+                <li><a href="/">전체보기</a></li>
+                <li><a href="rank.html">Dang's award</a></li>
+                <li><a href="welcome/survey">설문조사</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="all-sections hideForNav">
+        
+        <section class="home-intro">
+            <div class="home-text">
+                <h1>Woof woof!</h1>
+                <p>댕댕 영양 어쩌구 저쩌구 댕댕 영양 어쩌구 저쩌구 댕댕 영양 어쩌구 저쩌구 댕댕 영양 어쩌구 저쩌구 댕댕 영양 어쩌구 저쩌구 댕댕 영양 어쩌구</p>
+                
+				<% unless user_signed_in? %>
+					<a class="joinourpack" href="users/sign_in"><button>로그인</button></a>
+					<a class="joinourpack" href="users/sign_up"><button>가입하기</button></a>
+				<% end %>
+				<% if user_signed_in? %>
+					<a class="joinourpack" href="users/sign_out"><button>로그아웃</button></a>
+				<% end %>
+				
+            </div>
+        	    <div class="home-image1">
+    	            <img src="/assets/shiba.jpg" alt="dogwalking">
+	            </div>
+        </section>
+        
+            
+            <link rel="stylesheet" href="/Users/jongmin/Desktop/develup/swiper.min.css">
+            <style>
+                .swiper-container {
+                    width: 100%;
+                    height: 380px;
+                }
+                .swiper-slide {
+                    text-align: center;
+                    font-size: 18px;
+                    background: #fff;
+                    /* Center slide text vertically */
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: -webkit-flex;
+                    display: flex;
+                    -webkit-box-pack: center;
+                    -ms-flex-pack: center;
+                    -webkit-justify-content: center;
+                    justify-content: center;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    -webkit-align-items: center;
+                    align-items: center;
+                }
+            </style>
+            
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="slide swiper-slide"><p>
+                        <span class="subheading-carousel">이 달의 1위 제품</span>
+                        이 달의 1위 제품은, (더마독의 사료! 피부/모질-1위 랭크 텍스트 꺼내오기?) 입니다 <br>
+                        영양도, 기호성도, 건강도 챙긴 BEST DOG FOOD가 궁금하다면?<br><br>
+                        Dang's Awards 보러가기 → <br><br>
+                    </p>
+                    <div></div>
+                </div>
+                <div class="slide swiper-slide">
+                    <p>
+                        <span class="subheading-carousel">MD 추천 제품</span>
+                        댕!의 MD가 추천하는 제품!<br>
+                        '건강백서 - 건강한 장'입니다<br>
+                        기호성 최고! 피부까지 좋아지는 건식사료를 찾으신다면?<br><br>
+                        MD 추천 상품 보러가기 →<br>
+                    </p>
+                    <div></div>
+                </div>
+                <div class="slide swiper-slide">
+                    <p>
+                        <span class="subheading-carousel">댕댕이 선호 제품</span>
+                        우리 댕댕이가 좋아하는 제품 추천하기!<br><br>
+                        댕댕이 친구들에게 제품 추천하러가기 →<br>
+                    </p>
+                    <div></div>
+                </div>
+                <!-- <div class="swiper-slide">Slide 5</div>
+                    <div class="swiper-slide">Slide 6</div>
+                    <div class="swiper-slide">Slide 7</div>
+                    <div class="swiper-slide">Slide 8</div>
+                    <div class="swiper-slide">Slide 9</div>
+                    <div class="swiper-slide">Slide 10</div> -->
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+            
+            <!-- Swiper JS -->
+            <script src="/assets/swiper.min.js"></script>
+            <%= javascript_include_tag 'application',media: 'all'  %>
+
+            <script>
+                var swiper = new Swiper('.swiper-container', {
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+            </script>
+        </div> 
+    </section>
+        
+        <div class="section support">
+            <h2>후원사들</h2>
+            <div class="supporter">
+                <ul class="supporter-logo">
+                    <li><img src="/assets/supporter1.png" alt="westminster"></li>
+                    <li><img src="/assets/supporter2.jpg" alt="theguardian"></li>
+                    <li><img src="/assets/support4.png" alt="dogstrust"></li>
+                    <li><img src="/assets/supporter5.jpg" alt="rspca"></li>
+                    <li><img src="/assets/supporter4.png" alt="bbc"></li>
+                </ul>
+            </div>
+        </div> 
+        
+        <footer>
+            
+        </footer>
+        
+        <button class="button-scroll">
+            <img src="/assets/arrow.png" alt="">
+        </button>
+    </div>         

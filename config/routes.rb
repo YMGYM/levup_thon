@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  get 'food/rank'
-  get 'food/list'
-  get 'food/detail'
     root 'welcome#mainpage'
     devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
@@ -14,7 +11,13 @@ Rails.application.routes.draw do
     
     get 'welcome/mainpage'
     get 'welcome/mypage'
+    get 'welcome/survey'
+    post 'welcome/surveycreate' => 'welcome#surveycreate'
     
     get 'food/crawl'
+    get 'food/cawvtest'
+    
+    
+    
     
 end

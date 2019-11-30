@@ -423,7 +423,7 @@ input[type="email"], input[type="text"], textarea {
     font-family: "Karla";
 }
 
-input[type="email"], input[type="text"] {
+input[type="email"], input[type="text"], input[type="password"] {
 /* .input_form { */
     border: none;
     border-bottom: 2px solid var(--clr-dark);
@@ -432,7 +432,6 @@ input[type="email"], input[type="text"] {
     font-size: 2rem;
     min-height: 60px;
     padding: 5px 0 5px 0;
-    
 }
 
 textarea {
@@ -666,3 +665,7 @@ footer {
     }
     
 }
+
+label.required > abbr {
+  display: none;
+ }

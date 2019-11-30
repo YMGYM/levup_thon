@@ -5,7 +5,8 @@ class CreateFoods < ActiveRecord::Migration[5.2]
 	  t.text :caption
 	  t.text :imgsrc
 	  t.text :href
-      t.integer :type
+      t.string :avatars
+      t.integer :foodtype
       t.timestamps
     end
   end
