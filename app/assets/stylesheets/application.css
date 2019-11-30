@@ -197,8 +197,7 @@ nav {
 }
 .slide {
     font-family: "Inconsolata", sans-serif;
-    background: var(--clr-dark);
-    color: white;
+ 
     min-width: 100%;
 }
 .slide p {

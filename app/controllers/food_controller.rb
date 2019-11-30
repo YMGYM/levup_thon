@@ -17,10 +17,13 @@ class FoodController < ApplicationController
   end
     
   def cawvtest
+     # create = Food.new
      create = Food.new
-     
-     create.remote_avatars_url = 'http://www.dogfoodanalysis.com/dog_food_reviews/data/8/thumbs/MaximalDog.jpg'
-     create.save
+     create.remote_avatars_url = 'https://publicdomainq.net/images/201901/14s/publicdomainq-0030376aqd.jpg'
+      create.title = "hhhh"
+      create.foodtype = "bbvbb"
+      create.save
+      redirect_to '/'
   end
   def crawl
       

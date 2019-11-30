@@ -174,7 +174,6 @@ nav {
     font-family: "Inconsolata", sans-serif;
     color: var(--clr-dark);
     min-width: 100%;
-    background: var(--clr-blue);
     display: flex;
     flex-direction: row;
 }
