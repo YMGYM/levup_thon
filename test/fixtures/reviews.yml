@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: one
+  food: one
+  write_date: MyString
+  content: MyString
+  pet_kind: MyString
+  pet_size: MyString
+  pet_age: MyString
+
+two:
+  user: two
+  food: two
+  write_date: MyString
+  content: MyString
+  pet_kind: MyString
+  pet_size: MyString
+  pet_age: MyString
