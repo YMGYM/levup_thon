@@ -65,4 +65,4 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'nokogiri'
 
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
